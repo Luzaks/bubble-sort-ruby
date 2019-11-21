@@ -16,7 +16,6 @@ unsorted = (1..10).to_a.reverse!
 p bubble_sort(unsorted)
 p bubble_sort([4, 3, 78, 2, 0, 2])
 
-
 def bubble_sort_by(arr)
   temporal = true
   while temporal
