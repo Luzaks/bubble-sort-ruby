@@ -1,7 +1,3 @@
-# Bubble sort
-# frozen_string_literal: true
-
-# rubocop:disable MethodLength
 def bubble_sort(arr)
   temporal = true
   i = arr.length
@@ -9,16 +5,16 @@ def bubble_sort(arr)
     temporal = false
     (i - 1).times do |x|
       if arr[x] > arr[x + 1]
-        arr[x], arr[x + 1] = arr[x + 1], arr[x]
-        temporal = true
+        arr[x], arr[x + 1] = arr[x + 1], arr[x],
+                             temporal = true
       end
     end
   end
-  print arr
+  arr
 end
-bubble_sort([4, 3, 78, 2, 0, 2])
-
-# Bubble sort yield
+unsorted = (1..10).to_a.reverse!
+p bubble_sort(unsorted)
+p bubble_sort([4, 3, 78, 2, 0, 2])
 
 def bubble_sort_by(arr)
   temporal = true
@@ -32,10 +28,11 @@ def bubble_sort_by(arr)
       end
     end
   end
-  print arr
+  arr
 end
-# rubocop: enable MethodLength
 
-bubble_sort_by(%w[hi hey hello]) do |left, right|
+unsorted = %w[hello hi hey]
+
+p bubble_sort_by(unsorted) { |left, right|
   left.length <=> right.length
-end
+}
