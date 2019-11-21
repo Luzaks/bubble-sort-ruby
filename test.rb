@@ -3,7 +3,7 @@ def bubble_sort(arr)
   temporal = true
   i = arr.length
 
-  while temporal 
+  while temporal
     temporal = false
     (i-1).times do |x|
       if arr[x] > arr[x+1]
